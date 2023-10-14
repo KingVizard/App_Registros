@@ -15,7 +15,7 @@ namespace App_Registros
         public MainPage()
         {
             InitializeComponent();
-            mostrar();
+            //mostrar();
         }
 
         private async void btn_Guardar_Clicked(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace App_Registros
                     lsEmpleados.ItemsSource = EmpleadosList;
                 }
                 */
-                mostrar();
+                //mostrar();
             }
             else
             {
@@ -86,13 +86,18 @@ namespace App_Registros
             return respuesta;
         }
 
-        public async void mostrar()
+       //public async void mostrar()
+       // {
+       //     var EmpleadosList = await App.SQLiteDb.GetEmpleadosAsync();
+       //     if (EmpleadosList != null)
+       //     {
+       //         lsEmpleados.ItemsSource = EmpleadosList;
+       //     }
+       // }
+      
+        private async void btnMostrar_Clicked(object sender, EventArgs e)
         {
-            var EmpleadosList = await App.SQLiteDb.GetEmpleadosAsync();
-            if (EmpleadosList != null)
-            {
-                lsEmpleados.ItemsSource = EmpleadosList;
-            }
+            await Navigation.PushModalAsync(new ListaUsuarios());
         }
     }
 }

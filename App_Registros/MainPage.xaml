@@ -112,7 +112,7 @@
         -->
         <!---->
                 
-            
+ <!-- 
         <ListView x:Name="lsEmpleados"
                   HeightRequest="120"
                   WidthRequest="355"
@@ -161,8 +161,17 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-                
-                <!----> <!--
+-->
+        <Button Text="Ver lista" x:Name="btnMostrar" Clicked="btnMostrar_Clicked" BackgroundColor="SteelBlue"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="350"
+                CornerRadius="10"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="#FFF"
+                Margin="0"
+                Padding="0"/>
+        <!----> <!--
             </StackLayout>
         </Frame>
         -->
