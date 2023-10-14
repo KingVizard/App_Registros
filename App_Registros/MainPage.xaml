@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_Registros.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#efefef">
+
+    <StackLayout Spacing="20">
+        <Frame BackgroundColor="Coral"
+               Padding="10"
+               CornerRadius="0">
+            <Label Text="Registro de Empleados"
+                   HorizontalTextAlignment="Center"
+                   TextColor="White"
+                   FontSize="25"
+                   FontAttributes="Bold"/>
+        </Frame>
+        <Frame BackgroundColor="FloralWhite"
+               HeightRequest="70"
+               Margin="0"
+               Padding="5"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="350"
+               CornerRadius="10"
+               HasShadow="True">
+            <StackLayout HeightRequest="300"
+                         Padding="0" 
+                         Margin="0" 
+                         Spacing="0">
+                <Label Text="Nombre:"
+                       TextColor="#666"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtNombre" Keyboard="Chat" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="FloralWhite"
+               HeightRequest="70"
+               Margin="0"
+               Padding="5"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="350"
+               CornerRadius="10">
+            <StackLayout>
+                <Label Text="Apellido Paterno"
+                       TextColor="#666"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtApellidoP" Keyboard="Chat" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="FloralWhite"
+               HeightRequest="70"
+               Margin="0"
+               Padding="5"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="350"
+               CornerRadius="10">
+            <StackLayout>
+                <Label Text="Apellido Materno"
+                       TextColor="#666"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtApellidoM" Keyboard="Chat" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="FloralWhite"
+               HeightRequest="70"
+               Margin="0"
+               Padding="5"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="350"
+               CornerRadius="10">
+            <StackLayout>
+                <Label Text="Edad"
+                       TextColor="#666"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtEdad"
+                       Keyboard="Numeric" />
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="FloralWhite"
+               HeightRequest="70"
+               Margin="0"
+               Padding="5"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="350"
+               CornerRadius="10">
+            <StackLayout>
+                <Label Text="Telefono"
+                       TextColor="#666"
+                       FontAttributes="Bold"/>
+                <Entry x:Name="txtTelefono"
+                       Keyboard="Numeric" />
+            </StackLayout>
+        </Frame>
+        
+        
+        <Button Text="Guardar"
+                x:Name="btn_Guardar"
+                Clicked="btn_Guardar_Clicked"
+                BackgroundColor="Crimson"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="350"
+                CornerRadius="10"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="#FFF"
+                Margin="0"
+                Padding="0"
+                />
+        <!--
+        <Frame CornerRadius="10" BackgroundColor="green" WidthRequest="350" HorizontalOptions="CenterAndExpand" Padding="5">
+            <StackLayout Background="blue">
+        -->
+        <!---->
+                
+            
+        <ListView x:Name="lsEmpleados"
+                  HeightRequest="120"
+                  WidthRequest="355"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                  Header="Lista de Empleados"
+                  Background="#ccc"
+                  
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="20" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding IdEmp}"
+                                   Grid.Row="0"
+                                   Grid.Column="0" />
+                            <Label Text="{Binding Nombre}"
+                                   Grid.Row="0"
+                                   Grid.Column="1" />
+                            <Label Text="{Binding ApellidoPaterno}"
+                                   Grid.Row="0"
+                                   Grid.Column="2" />
+                            <Label Text="{Binding ApellidoMaterno}"
+                                   Grid.Row="0"
+                                   Grid.Column="3" />
+                            <Label Text="{Binding Edad}"
+                                   Grid.Row="0"
+                                   Grid.Column="4" />
+                            <Label Text="{Binding Telefono}"
+                                   Grid.Row="0"
+                                   Grid.Column="5" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                
+                <!----> <!--
+            </StackLayout>
+        </Frame>
+        -->
+    </StackLayout>
+
+</ContentPage>
