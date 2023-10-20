@@ -15,7 +15,6 @@ namespace App_Registros
         public MainPage()
         {
             InitializeComponent();
-            //mostrar();
         }
 
         private async void btn_Guardar_Clicked(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace App_Registros
                 };
 
                 await App.SQLiteDb.SaveEmpleadoAsync(emple);
-                //await App.SQLiteDB.SaveEmpleadoAsync(emple);
+        
                 
                 txtNombre.Text = "";
                 txtApellidoP.Text = "";
@@ -40,14 +39,6 @@ namespace App_Registros
                 txtEdad.Text = "";
                 txtTelefono.Text = "";
                 await DisplayAlert("Aviso", "Se guardo de manera exitosa", "Ok");
-                /*
-                var EmpleadosList = await App.SQLiteDb.GetEmpleadosAsync();
-                if (EmpleadosList != null)
-                {
-                    lsEmpleados.ItemsSource = EmpleadosList;
-                }
-                */
-                //mostrar();
             }
             else
             {
